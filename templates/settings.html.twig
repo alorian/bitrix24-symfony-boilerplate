@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('settings') }}
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="//api.bitrix24.com/api/v1/"></script>
+    {{ encore_entry_script_tags('settings') }}
+{% endblock %}
+
+{% block title %}Bitrix Settings{% endblock %}
+{% block body %}
+    <h2>Настройки приложения</h2>
+
+    Hello world!
+{% endblock %}

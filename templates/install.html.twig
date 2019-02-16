@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('install') }}
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="//api.bitrix24.com/api/v1/"></script>
+    {{ encore_entry_script_tags('install') }}
+{% endblock %}
+
+{% block title %}Bitrix Settings{% endblock %}
+{% block body %}
+    <h2>Установка приложения</h2>
+
+    {% if errorsList %}
+        <div id="result" class="failed">
+            Ошибки при установке приложения:
+            <ul>
+                {% for error in errorsList %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+    {% else %}
+        <div id="result" class="success">
+            Приложение успешно установлено
+        </div>
+    {% endif %}
+
+{% endblock %}

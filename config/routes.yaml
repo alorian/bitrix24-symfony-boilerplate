@@ -1,0 +1,15 @@
+settings:
+    path: /settings
+    controller: App\Controller\DefaultController::settings
+
+install:
+    path: /install
+    controller: App\Controller\DefaultController::install
+
+test:
+    path: /test
+    controller: App\Controller\DefaultController::test
+
+activity_test:
+    path: /activities/test
+    controller: App\Controller\ActivityController::test
